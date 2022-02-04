@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Inicio da linha do cabeçalho -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" type="imagens/" href="imagens/logo.png">
+    <title>Cadastro</title>
+</head>
+<!--Fim da linha do cabeçalho -->
+<body>
+    <!-- Inicio Formulário de Cadastro -->
+    <main>
+        <h2>Cadastro Pessoal</h2>
+        <form method="post" action="" name="enviarForm" onsubmit="return validarForm()">
+            <fieldset>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo"><br>
+                <label for="data">Data de Nascimento:</label>
+                <input type="text" id="data" name="data" placeholder="__/__/__"><br>
+                <label for="cpf">CPF:</label>
+                <input type="text" for="cpf" id="cpf" name="cpf" placeholder="Digite seu número de CPF" onblur="validarCPF(this)" maxlength="11" required onkeypress="numerico(evt)"><br>
+                <label for="rg"> RG: </label>
+                <input type="text" id="rg" name="rg" placeholder=" Digite seu número de RG" maxlength="9" onkeypress="numerico(evt)"><br>
+                <label>Sexo:</label>
+                <select nome="sexo" id="sexo">
+                    <option option value="vazio"></option>
+                    <option value="feminino"> Feminino </option>
+                    <option value="masculino"> Masculino </option>
+                    <option value="feminino"> Cisgênero </option>
+                    <option value="feminino"> Não-Binário </option>
+                    <option value="feminino"> Transgênero </option>
+                    <option value="feminino"> Não optar </option>
+                </select><br>
+                <label for="endereco"> Endereço: </label>
+                <input type="text" id="endereco" placeholder="Digite seu endereço" required><br>
+                <label for="numero"> Número: </label>
+                <input type="text" id="numero" placeholder="Digite seu número" required onkeypress="numerico(event)"><br>
+                <label for="bairro">Bairro: </label>
+                <input type="text" id="bairro" placeholder="Digite seu bairro"><br>
+                <label for="cidade">Cidade: </label>
+                <input type="text" id="cidade" placeholder="Digite a sua cidade"><br>
+                <label for="estado">Estado: </label>
+                <input type="text" id="estado" placeholder="Digite seu estado"><br>
+                <label for="cep">CEP: </label>
+                <input type="text" id="cep" placeholder=" 00000-000" maxlength="9" onkeypress="numerico(event)"><br>
+                <label for="telefonefixo">Telefone Fixo: </label>
+                <input type="text" id="telefonefixo" placeholder=" (xx) xxxx-xxxx" maxlength="10" onkeypress="numerico(event)" onkeydown="mascaraCelular(this)"><br>
+                <label for="telefonecelular">Telefone Celular:</label>
+                <input type="text" id="telefonecelular" placeholder=" (xx) xxxx-xxxx" maxlength="15" onkeypress="numerico(event)" onkeydown="mascaraCelular(this)"><br>
+                <input class="botao" type="submit" value="Cadastrar">
+                <input class="botao" type="reset" value="Limpar">
+            </fieldset>
+            </form>
+    </main>
+    <!--Fim do formulário do Cadastro -->
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Desenvolvida pela Denise Mocellin - Cadastral 2022</p>
+        <div class="contato">Contato:<br>
+            <a class="email" href="mailto:drmocellin52@hotmail.com?Subject=Hello%20again" target="_top">
+                <img src="imagens/email.png" width="30px" height="30px" alt="Envelope"></a>
+        </div>
+    </footer>
+    <!-- Rodapé da página -->
+    <script type="text/javascript" src="javascript/script.js"></script>
+</body>
+<!-- Fim do Corpo -->
+</html>
